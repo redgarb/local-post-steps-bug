@@ -1,0 +1,8 @@
+runs:
+  using: composite
+  steps:
+  - uses: ./depth2
+    id: depth2
+  - uses: ./post-step
+    with:
+      STEPS: ${{ tojson(steps) }}

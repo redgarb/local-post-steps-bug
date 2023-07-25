@@ -1,0 +1,12 @@
+on: push
+jobs:
+  _:
+    runs-on: self-hosted
+    steps:
+    - uses: actions/checkout@v3
+      id: checkout
+    - uses: ./depth1
+    - uses: test/test/depth1@main
+    - uses: ./post-step
+      with:
+        STEPS: ${{ tojson(steps) }}
