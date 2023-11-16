@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       id: checkout
-    - uses: redgarb/local-post-steps-bug/depth1-absolut
-    - uses: redgarb/local-post-steps-bug/post-step
+    - uses: redgarb/local-post-steps-bug/depth1-absolut@main
+    - uses: redgarb/local-post-steps-bug/post-step@main
       with:
         STEPS: ${{ tojson(steps) }}
