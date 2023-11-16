@@ -7,6 +7,12 @@ runs:
       echo "depth2=depth2" >>$GITHUB_OUTPUT
   - uses: redgarb/local-post-steps-bug/depth3-absolut@master
     id: depth2
+  - id: debug-outputs
+    shell: bash
+    run: |
+      echo "Should be depth2 -> ${{ steps.output-value.outputs.depth2 }}
+      echo "Should be depth3 -> ${{ steps.depth2.outputs.depth3 }}
+      echo "Should be depth4 -> ${{ steps.depth2.outputs.depth4 }}
   - uses: redgarb/local-post-steps-bug/post-step@master
     with:
       STEPS: ${{ tojson(steps) }}
