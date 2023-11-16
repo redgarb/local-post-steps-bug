@@ -2,6 +2,7 @@ runs:
   using: composite
   steps:
   - id: output-value
+    shell: bash
     run: |
       echo "depth4=depth4" >>$GITHUB_OUTPUT
   - uses: ./post-step
