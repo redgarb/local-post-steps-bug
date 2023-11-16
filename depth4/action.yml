@@ -1,6 +1,9 @@
 runs:
   using: composite
   steps:
+  - id: output-value
+    run: |
+      echo "depth4=depth4" >>$GITHUB_OUTPUT
   - uses: ./post-step
     with:
       STEPS: ${{ tojson(steps) }}
