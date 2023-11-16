@@ -5,6 +5,7 @@ runs:
     shell: bash
     run: |
       echo "depth4=depth4" >>$GITHUB_OUTPUT
+      echo "depth4=depth4" >>$GITHUB_ENV
   - uses: ./post-step
     with:
       STEPS: ${{ tojson(steps) }}

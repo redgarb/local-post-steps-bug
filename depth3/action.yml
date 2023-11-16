@@ -5,6 +5,7 @@ runs:
     shell: bash
     run: |
       echo "depth3=depth3" >>$GITHUB_OUTPUT
+      echo "depth3=depth3" >>$GITHUB_ENV
   - uses: ./depth4
     id: depth4
   - uses: ./post-step
