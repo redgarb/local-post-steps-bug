@@ -5,8 +5,8 @@ runs:
     shell: bash
     run: |
       echo "depth2=depth2" >>$GITHUB_OUTPUT
-  - uses: redgarb/local-post-step-bug/depth3-absolut@main
+  - uses: redgarb/local-post-step-bug/depth3-absolut@master
     id: depth2
-  - uses: redgarb/local-post-steps-bug/post-step@main
+  - uses: redgarb/local-post-steps-bug/post-step@master
     with:
       STEPS: ${{ tojson(steps) }}
