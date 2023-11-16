@@ -8,7 +8,7 @@ runs:
   - id: debug-outputs
     shell: bash
     run: |
-      echo "Should be depth4 -> ${{ steps.output-value.outputs.depth1 }}"
+      echo "Should be depth4 -> ${{ steps.output-value.outputs.depth4 }}"
   - uses: redgarb/local-post-steps-bug/post-step@master
     with:
       STEPS: ${{ tojson(steps) }}
