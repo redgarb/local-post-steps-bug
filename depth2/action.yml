@@ -1,6 +1,9 @@
 runs:
   using: composite
   steps:
+  - id: output-value
+    run: |
+      echo "depth2=depth2" >>$GITHUB_OUTPUT
   - uses: ./depth3
     id: depth3
   - uses: ./post-step
