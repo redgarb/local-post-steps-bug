@@ -1,0 +1,12 @@
+runs:
+  using: composite
+  steps:
+  - id: output-value
+    shell: bash
+    run: |
+      echo "depth3=depth3" >>$GITHUB_OUTPUT
+  - uses: redgarb/local-post-step-bug/depth4-absolut
+    id: depth3
+  - uses: redgarb/local-post-steps-bug/post-step
+    with:
+      STEPS: ${{ tojson(steps) }}
