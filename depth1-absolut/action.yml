@@ -5,7 +5,7 @@ runs:
     shell: bash
     run: |
       echo "depth1=depth1" >>$GITHUB_OUTPUT
-  - uses: redgarb/local-post-step-bug/depth2-absolut@master
+  - uses: redgarb/local-post-steps-bug/depth2-absolut@master
     id: depth2
   - uses: redgarb/local-post-steps-bug/post-step@master
     with:
