@@ -1,4 +1,6 @@
-on: push
+on:
+  push:
+  workflow_dispatch:
 jobs:
   local-post-steps-bug:
     runs-on: ubuntu-latest
@@ -9,3 +11,4 @@ jobs:
     - uses: ./post-step
       with:
         STEPS: ${{ tojson(steps) }}
+ 
