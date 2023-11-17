@@ -10,7 +10,6 @@ runs:
     shell: bash
     run: |
       echo "depth1=depth1" >>$GITHUB_OUTPUT
-      echo "depth1=depth1" >>$GITHUB_ENV
   - uses: redgarb/local-post-steps-bug/.github/actions/depth2-absolut@master
     id: depth2
   - id: debug-outputs

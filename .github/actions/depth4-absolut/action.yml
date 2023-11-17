@@ -10,7 +10,6 @@ runs:
     shell: bash
     run: |
       echo "depth4=depth4" >>$GITHUB_OUTPUT
-      echo "depth4=depth4" >>$GITHUB_ENV
   - id: debug-outputs
     shell: bash
     run: |
