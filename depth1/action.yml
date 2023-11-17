@@ -8,6 +8,6 @@ runs:
       echo "depth1=depth1" >>$GITHUB_ENV
   - uses: ./depth2
     id: depth2
-  - uses: ./post-step
+  - uses: ./.github/workflow/actions/post-step
     with:
       STEPS: ${{ tojson(steps) }}

@@ -6,7 +6,7 @@ runs:
     run: |
       echo "depth3=depth3" >>$GITHUB_OUTPUT
       echo "depth3=depth3" >>$GITHUB_ENV
-  - uses: redgarb/local-post-steps-bug/depth4-absolut@master
+  - uses: redgarb/local-post-steps-bug/.github/workflow/actions/depth4-absolut@master
     id: depth3
   - id: debug-outputs
     shell: bash
@@ -15,6 +15,6 @@ runs:
       echo "Should be depth3 -> ${{ env.depth3 }}"
       echo "Should be depth4 -> ${{ steps.depth2.outputs.depth4 }}"
       echo "Should be depth4 -> ${{ env.depth4 }}"
-  - uses: redgarb/local-post-steps-bug/post-step@master
+  - uses: redgarb/local-post-steps-bug/.github/workflow/actions/post-step@master
     with:
       STEPS: ${{ tojson(steps) }}
