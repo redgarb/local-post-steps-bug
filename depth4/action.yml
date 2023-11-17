@@ -6,6 +6,6 @@ runs:
     run: |
       echo "depth4=depth4" >>$GITHUB_OUTPUT
       echo "depth4=depth4" >>$GITHUB_ENV
-  - uses: ./.github/workflows/actions/post-step
+  - uses: ./.github/actions/post-step
     with:
       STEPS: ${{ tojson(steps) }}
