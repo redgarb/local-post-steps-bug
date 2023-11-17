@@ -1,7 +1,7 @@
 on:
   push:
   workflow_dispatch:
-workflows:
+jobs:
   local-post-steps-bug:
     runs-on: ubuntu-latest
     steps:
