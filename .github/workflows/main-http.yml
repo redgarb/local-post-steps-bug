@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       id: checkout
-    - uses: ./.github/workflows/actions/depth1-absolut
+    - uses: redgarb/local-post-steps-bug/.github/workflows/actions/depth1-absolut@master
     - uses: ./.github/workflows/actions/post-step
       with:
         STEPS: ${{ tojson(steps) }}
