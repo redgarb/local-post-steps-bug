@@ -10,6 +10,12 @@ jobs:
     - run: |
         echo "Should be depth1 -> ${{ steps.depth.outputs.depth1 }}"
         echo "Should be depth1 -> ${{ env.depth1 }}"
+        echo "Should be depth2 -> ${{ steps.depth.outputs.depth2 }}"
+        echo "Should be depth2 -> ${{ env.depth2 }}"
+        echo "Should be depth3 -> ${{ steps.depth.outputs.depth3 }}"
+        echo "Should be depth3 -> ${{ env.depth3 }}"
+        echo "Should be depth4 -> ${{ steps.depth.outputs.depth4 }}"
+        echo "Should be depth4 -> ${{ env.depth4 }}"
     - uses: redgarb/local-post-steps-bug/.github/actions/post-step@master
       with:
         STEPS: ${{ tojson(steps) }}
