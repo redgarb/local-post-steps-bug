@@ -1,3 +1,8 @@
+outputs:
+  depth2:
+    description: "Bla, bla, blub."
+    value: ${{ steps.output-value.outputs.depth2 }}
+
 runs:
   using: composite
   steps:
