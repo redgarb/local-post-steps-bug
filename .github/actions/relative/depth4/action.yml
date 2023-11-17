@@ -1,0 +1,19 @@
+outputs:
+  depth4:
+    description: "Bla, bla, blub."
+    value: ${{ steps.output-value.outputs.depth4 }}
+
+runs:
+  using: composite
+  steps:
+  - id: output-value
+    shell: bash
+    run: |
+      echo "depth4=depth4" >>$GITHUB_OUTPUT
+  - id: debug-outputs
+    shell: bash
+    run: |
+      echo "Should be depth4 -> ${{ steps.output-value.outputs.depth4 }}"
+  - uses: .github/actions/post-step
+    with:
+      STEPS: ${{ tojson(steps) }}

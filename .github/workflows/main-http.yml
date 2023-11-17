@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - id: depth
-      uses: redgarb/local-post-steps-bug/.github/actions/depth1-absolut@master
+      uses: redgarb/local-post-steps-bug/.github/actions/absolute/depth1@master
     - run: |
         echo "Should be depth1 -> ${{ steps.depth.outputs.depth1 }}"
         echo "Should be depth2 -> ${{ steps.depth.outputs.depth2 }}"
