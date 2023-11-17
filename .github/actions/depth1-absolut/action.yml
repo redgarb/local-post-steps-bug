@@ -11,18 +11,14 @@ runs:
     run: |
       echo "depth1=depth1" >>$GITHUB_OUTPUT
   - uses: redgarb/local-post-steps-bug/.github/actions/depth2-absolut@master
-    id: depth2
+    id: depth
   - id: debug-outputs
     shell: bash
     run: |
       echo "Should be depth1 -> ${{ steps.output-value.outputs.depth1 }}"
-      echo "Should be depth1 -> ${{ env.depth1 }}"
-      echo "Should be depth2 -> ${{ steps.depth2.outputs.depth2 }}"
-      echo "Should be depth2 -> ${{ env.depth2 }}"
-      echo "Should be depth3 -> ${{ steps.depth2.outputs.depth3 }}"
-      echo "Should be depth3 -> ${{ env.depth3 }}"
-      echo "Should be depth4 -> ${{ steps.depth2.outputs.depth4 }}"
-      echo "Should be depth4 -> ${{ env.depth4 }}"
+      echo "Should be depth2 -> ${{ steps.depth.outputs.depth2 }}"
+      echo "Should be depth3 -> ${{ steps.depth.outputs.depth3 }}"
+      echo "Should be depth4 -> ${{ steps.depth.outputs.depth4 }}"
   - uses: redgarb/local-post-steps-bug/.github/actions/post-step@master
     with:
       STEPS: ${{ tojson(steps) }}
