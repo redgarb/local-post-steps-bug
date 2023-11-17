@@ -2,6 +2,9 @@ outputs:
   depth3:
     description: "Bla, bla, blub."
     value: ${{ steps.output-value.outputs.depth3 }}
+  depth4:
+    description: "Bla, bla, blub."
+    value: ${{ steps.depth.outputs.depth4 }}
 
 runs:
   using: composite
