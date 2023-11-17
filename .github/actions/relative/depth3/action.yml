@@ -13,13 +13,13 @@ runs:
     shell: bash
     run: |
       echo "depth3=depth3" >>$GITHUB_OUTPUT
-  - uses: .github/actions/relative/depth4
+  - uses: ./.github/actions/relative/depth4
     id: depth
   - id: debug-outputs
     shell: bash
     run: |
       echo "Should be depth3 -> ${{ steps.output-value.outputs.depth3 }}"
       echo "Should be depth4 -> ${{ steps.depth.outputs.depth4 }}"
-  - uses: .github/actions/post-step
+  - uses: ./.github/actions/post-step
     with:
       STEPS: ${{ tojson(steps) }}

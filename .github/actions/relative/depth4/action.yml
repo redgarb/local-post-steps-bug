@@ -14,6 +14,6 @@ runs:
     shell: bash
     run: |
       echo "Should be depth4 -> ${{ steps.output-value.outputs.depth4 }}"
-  - uses: .github/actions/post-step
+  - uses: ./.github/actions/post-step
     with:
       STEPS: ${{ tojson(steps) }}
